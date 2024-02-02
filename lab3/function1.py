@@ -90,3 +90,9 @@ numbers = input()
 numbers = numbers.split()
 print(spy_game(numbers))
 
+#ex9 
+def volume(radius):
+    print((4/3) * 3.14 * radius * radius * radius)
+
+r = int(input())
+volume(r)
