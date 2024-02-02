@@ -119,3 +119,12 @@ def palindrome(str):
     
 s = input()
 palindrome(s)
+
+#ex12
+def histogram(nums):
+    for x in nums:
+        print('*' * int(x))
+    
+numbers = input()
+numbers = numbers.split()
+histogram(numbers)
