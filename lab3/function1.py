@@ -10,7 +10,7 @@ def conversion(F):
     print((5/9) * (F - 32))
 
 f = int(input())
-conversion(Fahrenheit)
+conversion(f)
 
 #ex3
 def solve(numheads, numlegs):
