@@ -97,7 +97,7 @@ def volume(radius):
 r = int(input())
 volume(r)
 
-#ex9 
+#ex10 
 def unique_list(nums):
     unique = []
     for i in nums:
@@ -108,3 +108,14 @@ def unique_list(nums):
 numbers = input()
 numbers = numbers.split()
 print(unique_list(numbers))
+
+#ex11
+def palindrome(str):
+    t = str[::-1]
+    if t == str:
+        print("Yes")
+    else:
+        print("No")
+    
+s = input()
+palindrome(s)
