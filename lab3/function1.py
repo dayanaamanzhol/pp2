@@ -96,3 +96,15 @@ def volume(radius):
 
 r = int(input())
 volume(r)
+
+#ex9 
+def unique_list(nums):
+    unique = []
+    for i in nums:
+        if i not in unique:
+            unique.append(i)
+    return unique
+    
+numbers = input()
+numbers = numbers.split()
+print(unique_list(numbers))
