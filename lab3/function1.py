@@ -2,12 +2,14 @@
 def ounces(grams):
     print(grams * 28.3495231)
 
-ounces(grams)
+g = int(input())
+ounces(g)
 
 #ex2
 def conversion(F):
     print((5/9) * (F - 32))
 
+f = int(input())
 conversion(Fahrenheit)
 
 #ex3
@@ -22,12 +24,24 @@ legs = 94
 solve(heads, legs)
 
 #ex4
-num = [1, 2, 3, 4, 5]
-def filter_prime(n):
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
 
+def filter_prime(numbers):
+    prime_numbers = []
+    for x in numbers:
+        if is_prime(int(x)):
+            prime_numbers.append(int(x))
+    return prime_numbers
 
-for x in num:
-    filter_prime(x)
+numbers = input()
+numbers = numbers.split()
+print(filter_prime(numbers))
 
 #ex5
 s = str(input())
@@ -55,17 +69,24 @@ s = str(input())
 reverse(s)
 
 #ex7
+def has_33(nums):
+    for i in range(len(nums) - 1):
+        if nums[i] == nums[i + 1] == '3':
+            return True
+    return False
+
+numbers = input()
+numbers = numbers.split()
+print(has_33(numbers))
+
+#ex8
 def spy_game(nums):
-    
+    for i in range(len(nums) - 2):
+        if nums[i] == '0' and nums[i+1] == '0' and nums[i+2] == '7':
+            return True
+    return False
 
+numbers = input()
+numbers = numbers.split()
+print(spy_game(numbers))
 
-spy_game([1,2,4,0,0,7,5])
-spy_game([1,0,2,4,0,5,7]) 
-spy_game([1,7,2,0,4,5,0]) 
-
-#ex9
-def volume(r):
-    print((4/3) * 3.14 * r * r * r)
-
-radius = int(input())
-volume(radius)
