@@ -22,4 +22,8 @@ if t == s:
 else:
     print("not palindrome")
 
-#ex4
+#ex5
+a = (True, True, False)
+b = (True, True, True)
+print(all(a))
+print(all(b))
