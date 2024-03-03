@@ -22,6 +22,12 @@ if t == s:
 else:
     print("not palindrome")
 
+#ex4
+import math
+a = int(input())
+b = int(input())
+print(math.sqrt(a+b/1000))
+
 #ex5
 a = (True, True, False)
 b = (True, True, True)
