@@ -18,7 +18,7 @@ def list_directories_and_files(path):
             files.append(item)
     return directories, files
 
-path = "/path/to/your/directory"
+path = "////"
 
 print("Directories:")
 print(list_directories(path))
@@ -45,7 +45,7 @@ def check_access(path):
     }
     return access_info
 
-path = "/path/to/your/directory_or_file"
+path = "////"
 
 access_info = check_access(path)
 
@@ -66,7 +66,7 @@ def path_info(path):
     else:
         return False, None, None
 
-path = "/path/to/your/file_or_directory"
+path = "////f"
 
 exists, filename, directory = path_info(path)
 
@@ -82,7 +82,7 @@ def count(file):
     with open(filename, 'r') as file:
         return sum(1 for line in file)
 
-file = "path/to/your/file.txt"
+file = "///file.txt"
 
 line_count = count(file)
 print(line_count)
@@ -93,7 +93,7 @@ def write_list_to_file(file, lst):
         for item in lst:
             file.write(str(item) + '\n')
 
-file = "path/to/your/file.txt"
+file = "///file.txt"
 
 lst = [1, 2, 3, 4, 5]
 
@@ -139,6 +139,6 @@ def delete_file(path):
     else:
         print(f"File not found: {path}")
 
-path = "path/to/your/file.txt"
+path = "///file.txt"
 
 delete_file(path)
