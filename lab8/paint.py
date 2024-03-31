@@ -1,3 +1,4 @@
+3
 import pygame
 
 def main():
