@@ -12,7 +12,7 @@ mickey_right = pygame.image.load('image/righthand.png')
 mickey = pygame.image.load('image/clock.png')
 
 clock = pygame.time.Clock()
-font = pygame.font.SysFont(None, 36) #знать не знаю что это
+font = pygame.font.SysFont(None, 36) 
 white = (255, 255, 255)
 
 hand_width, hand_height = mickey_left.get_width(), mickey_left.get_height()
