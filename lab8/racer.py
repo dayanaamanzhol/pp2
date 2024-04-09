@@ -60,7 +60,6 @@ class Coin(pygame.sprite.Sprite):
           self.rect.top = 0
           self.rect.center = (random.randint(40, w - 40), 0)
 
-      # Check for collision with player
       if self.rect.colliderect(P1.rect):
           coins_collected += 1
           self.rect.top = 0
@@ -99,14 +98,12 @@ coins = pygame.sprite.Group()
 all_sprites.add(coin)
 
 
-#Adding a new User event 
 INC_SPEED = pygame.USEREVENT + 1
 pygame.time.set_timer(INC_SPEED, 1000)
 
 #Game Loop
 while True:
 
-    #Cycles through all events occurring  
     for event in pygame.event.get():
         if event.type == INC_SPEED:
               speed += 0.5     
@@ -121,12 +118,10 @@ while True:
     screen.blit(coin_text, (w - 100, 10))
 
 
-    #Moves and Re-draws all Sprites
     for entity in all_sprites:
         screen.blit(entity.image, entity.rect)
         entity.move()
 
-    #To be run if collision occurs between Player and Enemy
     if pygame.sprite.spritecollideany(P1, enemies):
           pygame.mixer.Sound('PygameTutorial_3_0/crash.wav').play()
           time.sleep(0.5)
